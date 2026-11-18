@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="fontawesome-free-7.3.1-web/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Dashboard - CryptoVault</title>
+</head>
+
+<body>
+    <div class="layout">
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="logo-icon">CV</span>
+                <span class="logo-text">CryptoVault</span>
+            </div>
+
+            <nav class="side-nav">
+                <p class="nav-title">Menu</p>
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+                    <li><a href="#markets"><i class="fa-solid fa-chart-line"></i> Markets</a></li>
+                    <li><a href="#wallet"><i class="fa-solid fa-wallet"></i> Wallet</a></li>
+                </ul>
+
+                <p class="nav-title">Account</p>
+                <ul>
+                    <li><a href="settings.html"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                    <li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+                </ul>
+            </nav>
+
+            <div class="theme-toggle">
+                <span>Light Mode</span>
+                <label class="switch">
+                    <input type="checkbox" id="theme" aria-label="Light mode">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </aside>
+
+        <div class="main">
+
+            <header class="topbar">
+                <div class="page-heading">
+                    <h1>Dashboard</h1>
+                    <p>Welcome back, here is your portfolio overview.</p>
+                </div>
+
+                <div class="topbar-tools">
+                    <form class="search-box" role="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" placeholder="Search coins..." aria-label="Search">
+                    </form>
+
+                    <button class="icon-btn" type="button" aria-label="Notifications">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="dot"></span>
+                    </button>
+
+                    <div class="user">
+                        <img src="assets/avatar.png" alt="User avatar" class="avatar">
+                        <span class="user-name">Alex Morgan</span>
+                    </div>
+                </div>
+            </header>
+
+            <main class="content">
+                <section class="stats" aria-label="Statistics">
+                    <article class="card stat">
+                        <span class="stat-icon"><i class="fa-solid fa-sack-dollar"></i></span>
+                        <div>
+                            <p class="label">Total Balance</p>
+                            <h2 class="value">$44,254.32</h2>
+                        </div>
+                    </article>
+
+                    <article class="card stat">
+                        <span class="stat-icon"><i class="fa-solid fa-arrow-trend-up"></i></span>
+                        <div>
+                            <p class="label">Total Profit</p>
+                            <h2 class="value green">+$9,847.00</h2>
+                        </div>
+                    </article>
+
+                    <article class="card stat">
+                        <span class="stat-icon"><i class="fa-regular fa-clock"></i></span>
+                        <div>
+                            <p class="label">Pending Orders</p>
+                            <h2 class="value">7</h2>
+                        </div>
+                    </article>
+
+                    <article class="card stat">
+                        <span class="stat-icon"><i class="fa-solid fa-coins"></i></span>
+                        <div>
+                            <p class="label">Active Assets</p>
+                            <h2 class="value">12</h2>
+                        </div>
+                    </article>
+                </section>
+
+                <section class="coins" id="markets" aria-label="Cryptocurrency">
+                    <article class="card coin">
+                        <div class="coin-top">
+                            <div class="coin-name">
+                                <span class="coin-icon btc"><i class="fa-brands fa-bitcoin"></i></span>
+                                <h3>BTC/USD</h3>
+                            </div>
+                            <span class="change up">+2.45%</span>
+                        </div>
+                        <p class="price">$43,250.00</p>
+                        <div class="bars up-bars" aria-hidden="true">
+                            <span style="height: 30%"></span>
+                            <span style="height: 45%"></span>
+                            <span style="height: 35%"></span>
+                            <span style="height: 60%"></span>
+                            <span style="height: 50%"></span>
+                            <span style="height: 75%"></span>
+                            <span style="height: 65%"></span>
+                            <span style="height: 90%"></span>
+                        </div>
+                    </article>
+
+                    <article class="card coin">
+                        <div class="coin-top">
+                            <div class="coin-name">
+                                <span class="coin-icon eth"><i class="fa-brands fa-ethereum"></i></span>
+                                <h3>ETH/USD</h3>
+                            </div>
+                            <span class="change down">-1.12%</span>
+                        </div>
+                        <p class="price">$2,384.50</p>
+                        <div class="bars down-bars" aria-hidden="true">
+                            <span style="height: 85%"></span>
+                            <span style="height: 70%"></span>
+                            <span style="height: 78%"></span>
+                            <span style="height: 55%"></span>
+                            <span style="height: 62%"></span>
+                            <span style="height: 40%"></span>
+                            <span style="height: 48%"></span>
+                            <span style="height: 30%"></span>
+                        </div>
+                    </article>
+                </section>
+                <section class="extras" id="wallet" aria-label="Portfolio details">
+                    <article class="card extra">
+                        <h3>Asset Allocation</h3>
+                        <ul class="alloc">
+                            <li><span>Bitcoin</span><strong>55%</strong></li>
+                            <li><span>Ethereum</span><strong>30%</strong></li>
+                            <li><span>Others</span><strong>15%</strong></li>
+                        </ul>
+                        <div class="progress">
+                            <span class="p1" style="width: 55%"></span>
+                            <span class="p2" style="width: 30%"></span>
+                            <span class="p3" style="width: 15%"></span>
+                        </div>
+                    </article>
+
+                    <article class="card extra">
+                        <h3>Portfolio Health</h3>
+                        <p class="big">85%</p>
+                        <div class="meter">
+                            <span style="width: 85%"></span>
+                        </div>
+                        <p class="small">Your portfolio is well balanced.</p>
+                    </article>
+
+                    <article class="card extra">
+                        <h3>Risk Level</h3>
+                        <p class="big">Medium</p>
+                        <div class="risk" aria-hidden="true">
+                            <span class="on"></span>
+                            <span class="on"></span>
+                            <span></span>
+                        </div>
+                        <p class="small">Moderate exposure to volatile assets.</p>
+                    </article>
+                </section>
+
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

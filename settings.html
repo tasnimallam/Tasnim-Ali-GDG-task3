@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="fontawesome-free-7.3.1-web/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Settings CryptoVault</title>
+</head>
+
+<body>
+    <div class="layout">
+
+      
+        <aside class="sidebar">
+            <div class="logo">
+                <span class="logo-icon">CV</span>
+                <span class="logo-text">CryptoVault</span>
+            </div>
+
+            <nav class="side-nav">
+                <p class="nav-title">Menu</p>
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-chart-pie"></i> Dashboard</a></li>
+                    <li><a href="index.html#markets"><i class="fa-solid fa-chart-line"></i> Markets</a></li>
+                    <li><a href="index.html#wallet"><i class="fa-solid fa-wallet"></i> Wallet</a></li>
+                </ul>
+
+                <p class="nav-title">Account</p>
+                <ul>
+                    <li><a href="settings.html" class="active"><i class="fa-solid fa-gear"></i> Settings</a></li>
+                    <li><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+                </ul>
+            </nav>
+
+            <div class="theme-toggle">
+                <span>Light Mode</span>
+                <label class="switch">
+                    <input type="checkbox" id="theme" aria-label="Light mode">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </aside>
+        <div class="main">
+
+            <header class="topbar">
+                <div class="page-heading">
+                    <h1>Settings</h1>
+                    <p>Manage your account and preferences.</p>
+                </div>
+
+                <div class="topbar-tools">
+                    <form class="search-box" role="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="search" placeholder="Search settings..." aria-label="Search">
+                    </form>
+
+                    <button class="icon-btn" type="button" aria-label="Notifications">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="dot"></span>
+                    </button>
+
+                    <div class="user">
+                        <img src="assets/avatar.png" alt="User avatar" class="avatar">
+                        <span class="user-name">Alex Morgan</span>
+                    </div>
+                </div>
+            </header>
+
+            <main class="content">
+                <nav class="tabs" aria-label="Settings tabs">
+                    <a href="#" class="tab">Profile</a>
+                    <a href="#" class="tab">Security</a>
+                    <a href="#" class="tab">Notifications</a>
+                    <a href="#" class="tab active">Preferences</a>
+                    <a href="#" class="tab">Connected</a>
+                </nav>
+
+                <section class="card settings-card">
+                    <div class="settings-head">
+                        <h2>Display Preferences</h2>
+                        <p>Customize how CryptoVault looks and behaves.</p>
+                    </div>
+
+                    <form class="settings-form" action="#">
+
+                        <div class="fields">
+                            <div class="field">
+                                <label for="currency">Currency</label>
+                                <select id="currency" name="currency">
+                                    <option>USD - US Dollar</option>
+                                    <option>EUR - Euro</option>
+                                    <option>EGP - Egyptian Pound</option>
+                                    <option>GBP - British Pound</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="language">Language</label>
+                                <select id="language" name="language">
+                                    <option>English</option>
+                                    <option>Arabic</option>
+                                    <option>French</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="timezone">Timezone</label>
+                                <select id="timezone" name="timezone">
+                                    <option>Eastern Time (EST)</option>
+                                    <option>Cairo Time (EET)</option>
+                                    <option>Greenwich Mean Time (GMT)</option>
+                                    <option>Central European Time (CET)</option>
+                                </select>
+                            </div>
+
+                            <div class="field">
+                                <label for="date-format">Date Format</label>
+                                <select id="date-format" name="date-format">
+                                    <option>MM/DD/YYYY</option>
+                                    <option>DD/MM/YYYY</option>
+                                    <option>YYYY-MM-DD</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="toggle-row">
+                            <div>
+                                <p class="toggle-title">Compact View</p>
+                                <p class="toggle-desc">Show more data in less space.</p>
+                            </div>
+                            <label class="switch">
+                                <input type="checkbox" name="compact" aria-label="Compact View">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+
+        
+                        <div class="btn-row">
+                            <button type="button" class="btn primary">Save Preferences</button>
+                            <button type="reset" class="btn ghost">Reset</button>
+                        </div>
+                    </form>
+                </section>
+
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
